@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage":"https://yuanrenc.github.io/web-docker-cicd/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
