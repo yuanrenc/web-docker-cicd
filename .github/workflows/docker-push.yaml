@@ -29,4 +29,4 @@ jobs:
         with:
           context: ./my-app
           push: true
-          tags: colin/Reactapp:${{ github.sha }}
+          tags: colin/reactapp:${{ github.sha }}
