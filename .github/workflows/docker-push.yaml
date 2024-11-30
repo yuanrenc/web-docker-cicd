@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - '*'  # Trigger on every push to any branch
+      - main  # Trigger on every push to any branch
 
 jobs:
   build_and_push:
