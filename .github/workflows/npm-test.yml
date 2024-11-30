@@ -1,0 +1,27 @@
+name: Run Tests on Non-Main Branches
+
+on: push
+
+
+jobs:
+  run_tests:
+    if: github.ref != 'refs/heads/main'  # Only runs on non-main branches
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: |
+          cd my-app
+          npm install
+
+      - name: Run tests
+        run: |
+          npm test
